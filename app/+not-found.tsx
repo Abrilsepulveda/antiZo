@@ -1,8 +1,8 @@
 import { Link, Stack } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
 import React, { useState } from 'react';
-import UsuarioAdd from '../app/usuarios/components/usuarioAdd';
-import EmpresaAdd from '../app/usuarioEmpresa/components/EmpresaAdd';
+import UsuariosAdd from '../src/modules/login/personas/components/UsuariosAdd';
+import EmpresaAdd from '../src/modules/login/empresas/components/EmpresaAdd';
 
 export default function NotFoundScreen() {
   return (
@@ -10,7 +10,7 @@ export default function NotFoundScreen() {
       <Stack.Screen options={{ title: 'UUUUUY!' }} />
       <View style={styles.container}>
         <Text style={styles.title}>Esta pantalla no existe</Text>
-        <UsuarioAdd onAdd={undefined}></UsuarioAdd>
+        <UsuariosAdd onAdd={undefined}></UsuariosAdd>
         <EmpresaAdd onAdd={undefined}></EmpresaAdd>
 
         <Link href="/" style={styles.link}>
