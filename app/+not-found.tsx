@@ -12,7 +12,7 @@ export default function NotFoundScreen() {
         <Text style={styles.title}>Esta pantalla no existe</Text>
         <UsuariosAdd onAdd={undefined}></UsuariosAdd>
         <EmpresaAdd onAdd={undefined}></EmpresaAdd>
-
+      
         <Link href="/" style={styles.link}>
           <Text style={styles.linkText}>Pantalla principal</Text>
         </Link>
