@@ -4,7 +4,7 @@ import { Text , Stylesheet , View } from "react-native"
 export default function UsuarioAdd() {
     ruturn(
         <view>
-            <text> textInComponent</text>
+            <text> login usuarios </text>
         </view>
     );
 }
