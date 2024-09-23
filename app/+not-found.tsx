@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import React, { useState } from 'react';
 import UsuariosAdd from '../src/modules/login/personas/components/UsuariosAdd';
 import EmpresaAdd from '../src/modules/login/empresas/components/EmpresaAdd';
+import 'react-native-gesture-handler';
 
 export default function NotFoundScreen() {
   return (
