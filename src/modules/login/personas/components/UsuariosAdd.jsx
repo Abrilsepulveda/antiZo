@@ -25,3 +25,19 @@ const UsuarioApp = () => {
       };
       fetchUsuarios();
     }, [isAuthenticated]);
+
+    const handleAddUsuario = async (nuevoUsuario) => {
+        if (isAuthenticated) {
+          try {
+            await handleSubmit(nuevoUsuario);
+            // Fetch updated usuarios list after adding a new user
+            const snapshot = await firebase.firestore().collection("usuarios").get();
+            const usuariosData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            setUsuarios(usuariosData);
+          } catch (error) {
+            console.error("Error al agregar usuario: ", error);
+          }
+        } else {
+          loginWithRedirect();
+        }
+      };
