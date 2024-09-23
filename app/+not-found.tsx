@@ -17,12 +17,18 @@ export default function NotFoundScreen() {
     return (
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Login usuarios" component={Usuarios} />
-        <Stack.Screen name="Login empresas" component={Empresa} />
-        <Stack.Screen name="Settings" component={Settings} />
+        <Stack.Screen name="Login usuarios" component={UsuariosAdd} />
+        <Stack.Screen name="Login empresas" component={EmpresaAdd} />
+        <Stack.Screen name="perfil" component={perfil} />
       </Stack.Navigator>
     );
   }
+
+  return (
+    <NavigationContainer>
+    <MyStack/>
+    </NavigationContainer>
+  )
 
   return (
     
