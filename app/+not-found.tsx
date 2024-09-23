@@ -1,3 +1,4 @@
+import './gesture-handler';
 import { Link, Stack } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
 import React, { useState } from 'react';
@@ -5,12 +6,29 @@ import UsuariosAdd from '../src/modules/login/personas/components/UsuariosAdd';
 import EmpresaAdd from '../src/modules/login/empresas/components/EmpresaAdd';
 import 'react-native-gesture-handler';
 
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+
 export default function NotFoundScreen() {
+
+  const Stack = createStackNavigator();
+
+  function MyStack() {
+    return (
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Login usuarios" component={Usuarios} />
+        <Stack.Screen name="Login empresas" component={Empresa} />
+        <Stack.Screen name="Settings" component={Settings} />
+      </Stack.Navigator>
+    );
+  }
+
   return (
-    <>
-      <Stack.Screen options={{ title: 'UUUUUY!' }} />
+    
       <View style={styles.container}>
         <Text style={styles.title}>Esta pantalla no existe</Text>
+
         <UsuariosAdd onAdd={undefined}></UsuariosAdd>
         <EmpresaAdd onAdd={undefined}></EmpresaAdd>
       
@@ -18,7 +36,6 @@ export default function NotFoundScreen() {
           <Text style={styles.linkText}>Pantalla principal</Text>
         </Link>
       </View>
-    </>
   );
 }  
 
