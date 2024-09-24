@@ -53,6 +53,19 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#f2f2f2',
     },
+
+    searchInput: {
+        marginTop: 50,
+        marginHorizontal: 20,
+        padding: 10,
+        backgroundColor: '#fff',
+        borderRadius: 10,
+        fontSize: 18,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        elevation: 2,
+      },
     
 });
   
