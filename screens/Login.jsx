@@ -79,4 +79,14 @@ const handleLogin = () => {
       height: 80,
       marginBottom: 20,
     },
-  
+    title: {
+        fontSize: 36,
+        fontWeight: 'bold',
+        color: '#000',
+      },
+      subtitle: {
+        fontSize: 16,
+        color: '#000',
+        marginBottom: 30,
+      },
+    
