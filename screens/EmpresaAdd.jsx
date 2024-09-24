@@ -10,4 +10,9 @@ export default function RegistroEmpresa({ navigation }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [contacto, setContacto] = useState('');
-     
+
+    const handleRegistro = () => {
+        createUserWithEmailAndPassword(auth, email, password)
+          .then(async (userCredential) => {
+            const user = userCredential.user;
+    
