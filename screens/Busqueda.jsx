@@ -105,5 +105,10 @@ const styles = StyleSheet.create({
         marginVertical: 5,
     },
 
+    cardDistance: {
+        color: '#333',
+        fontWeight: 'bold',
+    },
+
 });
   
