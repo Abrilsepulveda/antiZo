@@ -6,4 +6,14 @@ import firebase from '../firebase';
 export default function BusquedaScreen() {
     const [trabajos, setTrabajos] = useState([]);
     const [busqueda, setBusqueda] = useState('');
-  
+ 
+    useEffect(() => {
+        // Obtener los datos de Firebase
+        const fetchTrabajos = async () => {
+          const trabajosSnapshot = await firebase.firestore().collection('trabajos').get();
+          const trabajosData = trabajosSnapshot.docs.map(doc => doc.data());
+          setTrabajos(trabajosData);
+        };
+                
+      } );
+    
