@@ -8,11 +8,26 @@ export default function RegistroEmpresa({ navigation }) {
     const [nombreEmpresa, setNombreEmpresa] = useState('');
     const [tipoEmpresa, setTipoEmpresa] = useState('');
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [contraseña, setContraseña] = useState('');
     const [contacto, setContacto] = useState('');
 
     const handleRegistro = () => {
-        createUserWithEmailAndPassword(auth, email, password)
+        createEmailyPassword(auth, email, contraseña)
           .then(async (userCredential) => {
             const user = userCredential.user;
     
+            await setDoc(doc(db, "empresas", user.uid), {
+                nombreEmpresa: nombreEmpresa,
+                tipoEmpresa: tipoEmpresa,
+                email: email,
+                contacto: contacto,
+              });
+      
+              console.log('Empresa registrada con éxito');
+              navigation.navigate('Home'); // Navegar a la pantalla de inicio o donde sea necesario
+            })
+            .catch(error => {
+              console.error('Error al registrar la empresa:', error);
+            });
+        };
+      
