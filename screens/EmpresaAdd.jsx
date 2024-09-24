@@ -116,3 +116,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginTop: 20,
       },
+      buttonText: {
+        color: '#fff',
+        fontWeight: 'bold',
+      },
+      switchText: {
+        color: '#000',
+        marginTop: 15,
+        fontSize: 16,
+        textDecorationLine: 'underline',
+      },
+    });
