@@ -27,7 +27,6 @@ const handleLogin = () => {
       <Text style={styles.title}>WorkMap</Text>
       <Text style={styles.subtitle}>Tu trabajo ideal, a un click de distancia</Text>
 
-
       <TextInput
         style={styles.input}
         placeholder="correo@gmail.com"
@@ -119,7 +118,7 @@ const handleLogin = () => {
       },
       googleButton: {
         width: '100%',
-        backgroundColor: '#',
+        backgroundColor: '#fff',
         padding: 15,
         borderRadius: 8,
         alignItems: 'center',
