@@ -7,6 +7,10 @@ export default function EmpresaAdd() {
             <view>
                 <image source={require('../assets/imagenes/spider.jpeg')} style={styles.spider} />
             </view>
+
+            <view style={styles.tarjeta}>
+
+            </view>
         </view>
     );
 }
@@ -22,5 +26,22 @@ const styles = StyleSheet.create({
         height:100,
         borderRadius: 50,
         borderColor:'white'
+    },
+
+    tarjeta:{
+        margin: 20,
+        backgroundColor:'white',
+        borderRadius:20,
+        width:'90%',
+        padding:20,
+        shadowColor:"#0000",
+        shadowOffset:{
+            width:0,
+            height:2
+        },
+        shadowOpacity:0.25,
+        shadowRadius:4,
+        elevation:5,
+        
     }
 });
