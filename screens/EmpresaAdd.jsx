@@ -24,10 +24,14 @@ export default function RegistroEmpresa({ navigation }) {
               });
       
               console.log('Empresa registrada con éxito');
-              navigation.navigate('Home'); // Navegar a la pantalla de inicio o donde sea necesario
+              navigation.navigate('Home'); 
             })
             .catch(error => {
               console.error('Error al registrar la empresa:', error);
             });
         };
-      
+
+        return (
+            <View style={styles.container}>
+              <Image source={require('./assets/logo.png')} style={styles.logo} />
+              <Text style={styles.title}>WorkMap</Text>
