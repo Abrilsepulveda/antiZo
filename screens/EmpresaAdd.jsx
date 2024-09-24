@@ -79,3 +79,13 @@ export default function RegistroEmpresa({ navigation }) {
     </View>
   );
 }   
+
+// estilos
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#EFFFA6',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: 20,
+    },
