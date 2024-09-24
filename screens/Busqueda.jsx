@@ -93,7 +93,17 @@ const styles = StyleSheet.create({
     cardContent: {
         flex: 1,
         padding: 10,
-      },
+    },
+
+    cardTitle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+    
+    cardSubtitle: {
+        color: '#666',
+        marginVertical: 5,
+    },
 
 });
   
