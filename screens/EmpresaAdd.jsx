@@ -47,3 +47,10 @@ export default function RegistroEmpresa({ navigation }) {
                 value={tipoEmpresa}
                 onChangeText={setTipoEmpresa}
             />
+            <TextInput
+                style={styles.input}
+                placeholder="Email"
+                value={email}
+                onChangeText={setEmail}
+                keyboardType="email-address"
+            />
