@@ -41,3 +41,9 @@ export default function RegistroEmpresa({ navigation }) {
                 value={nombreEmpresa}
                 onChangeText={setNombreEmpresa}
             />
+            <TextInput
+                style={styles.input}
+                placeholder="Tipo de Empresa"
+                value={tipoEmpresa}
+                onChangeText={setTipoEmpresa}
+            />
