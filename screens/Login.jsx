@@ -63,3 +63,20 @@ const handleLogin = () => {
       </Text>
     </View>
   );
+
+
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#EFFFA6',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: 20,
+  
+    },
+    logo: {
+      width: 80,
+      height: 80,
+      marginBottom: 20,
+    },
+  
