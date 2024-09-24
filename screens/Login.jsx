@@ -119,7 +119,7 @@ const handleLogin = () => {
       },
       googleButton: {
         width: '100%',
-        backgroundColor: '#fff',
+        backgroundColor: '#',
         padding: 15,
         borderRadius: 8,
         alignItems: 'center',
