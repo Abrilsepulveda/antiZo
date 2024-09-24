@@ -54,10 +54,17 @@ export default function RegistroEmpresa({ navigation }) {
                 onChangeText={setEmail}
                 keyboardType="email-address"
             />
-<TextInput
-        style={styles.input}
-        placeholder="Contraseña"
-        value={password}
-        onChangeText={setCotraseña}
-        secureTextEntry
-      />
+            <TextInput
+                    style={styles.input}
+                    placeholder="Contraseña"
+                    value={password}
+                    onChangeText={setCotraseña}
+                    secureTextEntry
+                />
+            <TextInput
+                    style={styles.input}
+                    placeholder="Número de contacto"
+                    value={contacto}
+                    onChangeText={setContacto}
+                    keyboardType="phone-pad"
+            />
