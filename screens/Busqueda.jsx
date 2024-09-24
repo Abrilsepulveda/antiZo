@@ -26,6 +26,8 @@ export default function BusquedaScreen() {
                 value={busqueda}
                 onChangeText={setBusqueda}
             />
+
+            <MapView style={styles.map} />
         </View>
       );
 }
