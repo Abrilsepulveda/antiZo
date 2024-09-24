@@ -128,8 +128,8 @@ const handleLogin = () => {
         borderColor: '#ccc',
       },
       googleIcon: {
-        width: 24,
-        height: 24,
+        width: 20,
+        height: 20,
         marginRight: 10,
       },
     
