@@ -26,7 +26,6 @@ const handleLogin = () => {
       <Image source={require('./assets/logo.png')} style={styles.logo} />
       <Text style={styles.title}>WorkMap</Text>
       <Text style={styles.subtitle}>Tu trabajo ideal, a un click de distancia</Text>
-      
 
 
       <TextInput
