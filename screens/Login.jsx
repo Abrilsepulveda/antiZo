@@ -89,4 +89,42 @@ const handleLogin = () => {
         color: '#000',
         marginBottom: 30,
       },
+      input: {
+        width: '100%',
+        padding: 15,
+        borderColor: '#ccc',
+        borderWidth: 1,
+        borderRadius: 8,
+        marginBottom: 15,
+      },
+      forgotPassword: {
+        alignSelf: 'flex-end',
+        marginBottom: 20,
+      },
+      forgotPasswordText: {
+        color: '#007BFF',
+      },
+      loginButton: {
+        width: '100%',
+        backgroundColor: '#007BFF',
+        padding: 15,
+        borderRadius: 8,
+        alignItems: 'center',
+        marginBottom: 20,
+      },
+      loginButtonText: {
+        color: '#fff',
+        fontWeight: 'bold',
+      },
+      googleButton: {
+        width: '100%',
+        backgroundColor: '#fff',
+        padding: 15,
+        borderRadius: 8,
+        alignItems: 'center',
+        flexDirection: 'row',
+        marginBottom: 20,
+        borderWidth: 1,
+        borderColor: '#ccc',
+      },
     
