@@ -28,6 +28,22 @@ export default function BusquedaScreen() {
             />
 
             <MapView style={styles.map} />
+
+            <FlatList
+                data={trabajos}
+                keyExtractor={(item) => item.id}
+                renderItem={({ item }) => (
+                <View style={styles.card}>
+                    <Image source={{ uri: item.imagen }} style={styles.cardImage} />
+                    <View style={styles.cardContent}>
+                        <Text style={styles.cardTitle}>{item.nombre}</Text>
+                        <Text style={styles.cardSubtitle}>{item.ubicacion}</Text>
+                        <Text style={styles.cardDistance}>{item.distancia} min left</Text>
+                    </View>
+                </View>
+                )}
+            />
+
         </View>
       );
 }
