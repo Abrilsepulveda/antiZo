@@ -14,6 +14,7 @@ export default function BusquedaScreen() {
           const trabajosData = trabajosSnapshot.docs.map(doc => doc.data());
           setTrabajos(trabajosData);
         };
-                
-      } );
+
+        fetchTrabajos();
+      }, []);
     
