@@ -72,3 +72,10 @@ export default function RegistroEmpresa({ navigation }) {
         <TouchableOpacity style={styles.button} onPress={handleRegistro}>
         <Text style={styles.buttonText}>Registrarme</Text>
         </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate('RegistroEmpleado')}>
+        <Text style={styles.switchText}>Registrarse como Empleado</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}   
