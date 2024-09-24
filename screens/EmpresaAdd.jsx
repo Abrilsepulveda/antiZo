@@ -68,3 +68,7 @@ export default function RegistroEmpresa({ navigation }) {
                     onChangeText={setContacto}
                     keyboardType="phone-pad"
             />
+
+        <TouchableOpacity style={styles.button} onPress={handleRegistro}>
+        <Text style={styles.buttonText}>Registrarme</Text>
+        </TouchableOpacity>
