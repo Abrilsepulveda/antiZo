@@ -16,5 +16,11 @@ export default function BusquedaScreen() {
         };
 
         fetchTrabajos();
-      }, []);
+    }, []);
     
+    return (
+        <View style={styles.container}>
+            
+        </View>
+      );
+}
