@@ -20,7 +20,12 @@ export default function BusquedaScreen() {
     
     return (
         <View style={styles.container}>
-            
+            <TextInput
+                style={styles.searchInput}
+                placeholder="Buscar trabajo"
+                value={busqueda}
+                onChangeText={setBusqueda}
+            />
         </View>
       );
 }
