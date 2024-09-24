@@ -70,7 +70,19 @@ const styles = StyleSheet.create({
     map: {
         ...StyleSheet.absoluteFillObject,
         zIndex: -1, 
-      },
+    },
+
+    card: {
+        flexDirection: 'row',
+        margin: 10,
+        backgroundColor: '#fff',
+        borderRadius: 10,
+        overflow: 'hidden',
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        elevation: 2,
+    }
 
 });
   
