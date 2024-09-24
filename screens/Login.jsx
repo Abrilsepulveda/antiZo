@@ -8,3 +8,16 @@ export default function LoginScreen({ navigation }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 }
+
+
+const handleLogin = () => {
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log('Usuario logueado:', user.email);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
