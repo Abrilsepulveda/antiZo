@@ -133,3 +133,18 @@ const handleLogin = () => {
         marginRight: 10,
       },
     
+      googleButtonText: {
+        color: '#000',
+        fontWeight: 'bold',
+      },
+      registerText: {
+        color: '#007BFF',
+        marginBottom: 20,
+      },
+      footer: {
+        fontSize: 12,
+        color: '#999',
+        textAlign: 'center',
+        marginTop: 20,
+    },
+    });
