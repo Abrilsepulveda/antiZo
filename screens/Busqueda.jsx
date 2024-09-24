@@ -82,7 +82,13 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         elevation: 2,
-    }
+    },
+
+    cardImage: {
+        width: 100,
+        height: 100,
+        borderRadius: 10,
+      },
 
 });
   
