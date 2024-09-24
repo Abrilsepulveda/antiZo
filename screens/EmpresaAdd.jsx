@@ -35,3 +35,9 @@ export default function RegistroEmpresa({ navigation }) {
             <View style={styles.container}>
               <Image source={require('./assets/logo.png')} style={styles.logo} />
               <Text style={styles.title}>WorkMap</Text>
+              <TextInput
+                style={styles.input}
+                placeholder="Nombre de la Empresa"
+                value={nombreEmpresa}
+                onChangeText={setNombreEmpresa}
+            />
