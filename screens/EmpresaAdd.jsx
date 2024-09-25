@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { auth, createEmailyContraseña } from './firebase';
+import { auth, createUserWithEmailAndPassword } from './firebase';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
 const db = getFirestore();
@@ -8,11 +8,11 @@ export default function RegistroEmpresa({ navigation }) {
     const [nombreEmpresa, setNombreEmpresa] = useState('');
     const [tipoEmpresa, setTipoEmpresa] = useState('');
     const [email, setEmail] = useState('');
-    const [contraseña, setContraseña] = useState('');
+    const [password, setPassword] = useState('');
     const [contacto, setContacto] = useState('');
 
     const handleRegistro = () => {
-        createEmailyContraseña(auth, email, contraseña)
+        createUserWithEmailAndPassword(auth, email, password)
           .then(async (userCredential) => {
             const user = userCredential.user;
     
@@ -58,7 +58,7 @@ export default function RegistroEmpresa({ navigation }) {
                     style={styles.input}
                     placeholder="Contraseña"
                     value={password}
-                    onChangeText={setCotraseña}
+                    onChangeText={setPassword}
                     secureTextEntry
                 />
             <TextInput
