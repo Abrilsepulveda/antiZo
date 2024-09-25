@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native'; 
 import {  signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase'; 
 
 
-const LoginScreen = () => {
+
+const Login = () => {
   const navigation = useNavigation();
 
   return (
     <View> 
 
       {/* ... login form */}
-      <Button title="Register as User" onPress={() => navigation.navigate('UserRegistration')} />
+      <Button title="Registrar usuario" onPress={() => navigation.navigate('UsuariosAdd')} />
+      <Button title="Registrar empresa" onPress={() => navigation.navigate('EmpresaAdd')} />
     </View>
   );
 };
