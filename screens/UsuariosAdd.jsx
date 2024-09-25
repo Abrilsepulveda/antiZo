@@ -3,6 +3,30 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'reac
 import { auth, createUserWithEmailAndPassword } from '../firebase';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
+
+const UsuariosAdd = () => {
+  const navigation = useNavigation();
+
+  const handleRegistration = () => {
+    // Lógica de registro del usuario
+    console.log('Usuario registrado exitosamente');
+
+    // Navegar a la pantalla Home después del registro
+    navigation.navigate('Home');
+
+    
+  };
+
+  return (
+    <View>
+      <Text>Formulario de Registro de Usuario</Text>
+      {/* Campos del formulario de registro */}
+      <Button title="Registrarse" onPress={handleRegistration} />
+      <Button title="Volver a Home" onPress={() => navigation.goBack()} />
+    </View>
+  );
+};
+
 const db = getFirestore();
 
 <Button title="Back to Login" onPress={() => navigation.navigate('Login')} />
