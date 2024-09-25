@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { auth, createUserWithEmailAndPassword } from './firebase';
+import { auth, createEmailyContraseña } from './firebase';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
 const db = getFirestore();
@@ -13,7 +13,7 @@ export default function RegistroEmpleado({ navigation }) {
     const [contacto, setContacto] = useState('');
 
     const handleRegistro = () => {
-        createUserWithEmailAndPassword(auth, email, password)
+        createEmailyContraseña(auth, email, password)
           .then(async (userCredential) => {
             const user = userCredential.user;
             await setDoc(doc(db, "empleados", user.uid), {
