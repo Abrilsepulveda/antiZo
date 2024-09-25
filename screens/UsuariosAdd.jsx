@@ -11,3 +11,9 @@ export default function RegistroEmpleado({ navigation }) {
     const [email, setEmail] = useState('');
     const [contraseña, setContraseña] = useState('');
     const [contacto, setContacto] = useState('');
+
+    const handleRegistro = () => {
+        createUserWithEmailAndPassword(auth, email, password)
+          .then(async (userCredential) => {
+            const user = userCredential.user;
+    
