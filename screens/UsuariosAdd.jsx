@@ -13,7 +13,7 @@ export default function RegistroEmpleado({ navigation }) {
     const [contacto, setContacto] = useState('');
 
     const handleRegistro = () => {
-        createEmailyContraseña(auth, email, password)
+        createEmailyContraseña(auth, email, contraseña)
           .then(async (userCredential) => {
             const user = userCredential.user;
             await setDoc(doc(db, "empleados", user.uid), {
