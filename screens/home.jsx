@@ -4,6 +4,18 @@ import { View, StyleSheet, Dimensions } from 'react-native'; // Componentes de R
 import MapView, { Marker } from 'react-native-maps'; // Mapa y marcador de React Native 
 Maps
 
+
+export default function Home({ navigation }) {
+  return (
+    <View>
+      <Text>Home Screen</Text>
+      <Button title="Add User" onPress={() => navigation.navigate('UsuariosAdd')} />
+      <Button title="Add Company" onPress={() => navigation.navigate('EmpresasAdd')} />
+      <Button title="Search" onPress={() => navigation.navigate('Busqueda')} />
+    </View>
+  );
+}
+
 export default function MapScreen()  {
     // Defini la región inicial que mostrará el mapa, con coordenadas y zoom
     const initialRegion = {
@@ -26,13 +38,6 @@ export default function MapScreen()  {
   title="Ubicación 1" // Título al hacer clic en el marcador
   description="Descripción de la ubicación" // Descripción que se muestra al hacer clic
 />
-    <View>
-      <Text>Home Screen</Text>
-      <Button title="Add User" onPress={() => navigation.navigate('UsuariosAdd')} />
-      <Button title="Add Company" onPress={() => navigation.navigate('EmpresasAdd')} />
-      <Button title="Search" onPress={() => navigation.navigate('Busqueda')} />
-    </View>
-
 </MapView>
 </View>
 
