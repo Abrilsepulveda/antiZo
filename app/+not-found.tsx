@@ -8,3 +8,5 @@ import UsuariosAdd from './UsuariosAdd';
 import EmpresasAdd from './EmpresasAdd';
 import Home from './Home';
 import Busqueda from './Busqueda';
+
+const Stack = createStackNavigator();
