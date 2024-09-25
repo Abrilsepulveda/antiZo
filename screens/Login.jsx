@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native'; 
-import { getAuth, inicioSesionConEmailyContraseña } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from './firebase'; 
 
 
 export default function LoginScreen({ navigation }) {
     const [email, setEmail] = useState('');
-    const [contraseña, setContraseña] = useState('');
+    const [password, setPassword] = useState('');
 }
 
 
 const handleLogin = () => {
-  inicioSesionConEmailyContraseña(auth, email, contraseña)
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log('Usuario logueado:', user.email);
@@ -38,8 +38,8 @@ const handleLogin = () => {
         style={styles.input}
         placeholder="contraseña"
         secureTextEntry
-        value={contraseña}
-        onChangeText={setContraseña}
+        value={password}
+        onChangeText={setPassword}
       />
       <TouchableOpacity style={styles.forgotPassword}>
         <Text style={styles.forgotPasswordText}>recuperar contraseña</Text>
