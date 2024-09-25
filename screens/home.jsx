@@ -31,3 +31,8 @@ export default function MapScreen()  {
 );
 }
 //  estilos de la pantalla y el mapa
+const styles = StyleSheet.create({
+    container: {
+      flex: 1, // El contenedor ocupa toda la pantalla
+    },
+
