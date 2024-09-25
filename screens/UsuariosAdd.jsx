@@ -61,3 +61,10 @@ export default function RegistroEmpleado({ navigation }) {
                 onChangeText={setContraseña}
                 secureTextEntry
             />
+            <TextInput
+                style={styles.input}
+                placeholder="Número de contacto"
+                value={contacto}
+                onChangeText={setContacto}
+                keyboardType="phone-pad"
+            />
