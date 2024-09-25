@@ -51,5 +51,5 @@ const styles = StyleSheet.create({
     map: {
         width: Dimensions.get('window').width, // Ancho del mapa igual al ancho de la pantalla
         height: Dimensions.get('window').height, // Alto del mapa igual al alto de la pantalla
-      },
-    });
+      },
+    });

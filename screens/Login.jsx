@@ -1,21 +1,14 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native'; 
 import {  signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from './firebase'; 
+import { auth } from '../firebase'; 
 
 
 export default function Login({ navigation }) {
-  return (
-    <View>
-      <Text>Login Screen</Text>
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
-    </View>
-  );
-}
-export default function LoginScreen({ navigation }) {
+  
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-}
+
 
 
 const handleLogin = async () => {
@@ -23,8 +16,8 @@ const handleLogin = async () => {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
       console.log('Usuario logueado:', user.email);
-      // Navega a la pantalla principal
-      navigation.navigate('Home'); // Cambia 'Home' al nombre de tu pantalla principal
+  
+      navigation.navigate('Home'); 
   } catch (error) {
       console.error(error);
       Alert.alert('Error de inicio de sesión', error.message);
@@ -73,7 +66,7 @@ const handleLogin = async () => {
       </Text>
     </View>
   );
-
+}
 
   const styles = StyleSheet.create({
     container: {

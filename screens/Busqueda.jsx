@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, StyleSheet, Image, FlatList } from 'react-native';
 import MapView from 'react-native-maps';
 import firebase from '../firebase';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
+
 
 import bandejaImage from '../assets/imagenes/bandeja.png';
 import cuentaImage from '../assets/imagenes/cuenta.png';
@@ -10,11 +14,11 @@ export default function Busqueda() {
     return (
       <View>
         <Text>Busqueda Screen</Text>
-      </View>
-    );
+      </View>
+    );
   }
   
-export default function BusquedaScreen() {
+function BusquedaScreen() {
     const [trabajos, setTrabajos] = useState([]);
     const [busqueda, setBusqueda] = useState('');
  
@@ -59,6 +63,62 @@ export default function BusquedaScreen() {
         </View>
       );
 }
+
+function Home() {
+    return (
+        <View style={styles.center}>
+            <Text>Home</Text>
+        </View>
+    );
+}
+
+function Profile() {
+    return (
+        <View style={styles.center}>
+            <Text>Profile </Text>
+        </View>
+    );
+}
+
+export default function App() {
+    return (
+        // Envolver el contenido en NavigationContainer para habilitar la navegación
+        <NavigationContainer>
+            <Tab.Navigator>
+                <Tab.Screen 
+                        name="Busqueda" 
+                        component={BusquedaScreen} 
+                        options={{
+                            // Establecer el ícono de búsqueda
+                            tabBarIcon: ({ color, size }) => (
+                                <Ionicons name="search" color={color} size={size} />
+                            ),
+                        }} 
+                    />
+                    <Tab.Screen 
+                        name="Home" 
+                        component={HomeScreen} 
+                        options={{
+                            // Establecer el ícono de inicio
+                            tabBarIcon: ({ color, size }) => (
+                                <Ionicons name="home" color={color} size={size} />
+                            ),
+                        }} 
+                    />
+                    <Tab.Screen 
+                        name="Profile" 
+                        component={ProfileScreen} 
+                        options={{
+                            // Establecer el ícono de perfil
+                            tabBarIcon: ({ color, size }) => (
+                                <Ionicons name="person" color={color} size={size} />
+                            ),
+                        }} 
+                    />
+                </Tab.Navigator>
+            </NavigationContainer>
+        );
+    }
 
 const styles = StyleSheet.create({
     container: {

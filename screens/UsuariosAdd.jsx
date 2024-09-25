@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { auth, createUserWithEmailAndPassword } from './firebase';
+import { auth, createUserWithEmailAndPassword } from '../firebase';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
 const db = getFirestore();
@@ -9,8 +9,8 @@ export default function UsuariosAdd() {
   return (
     <View>
       <Text>Usuarios Add Screen</Text>
-    </View>
-  );
+    </View>
+  );
 }
 
 export default function RegistroEmpleado({ navigation }) {
@@ -40,7 +40,7 @@ export default function RegistroEmpleado({ navigation }) {
 
         return (
             <View style={styles.container}>
-              <Image source={require('./assets/logo.png')} style={styles.logo} />
+              <Image source={require('../assets/imagenes/logo.png')} style={styles.logo} />
               <Text style={styles.title}>WorkMap</Text>
         
               <TextInput
