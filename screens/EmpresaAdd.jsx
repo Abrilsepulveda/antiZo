@@ -1,0 +1,33 @@
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { auth, createUserWithEmailAndPassword } from './firebase';
+import { getFirestore, doc, setDoc } from 'firebase/firestore';
+
+const db = getFirestore();
+export default function RegistroEmpresa({ navigation }) {
+    const [nombreEmpresa, setNombreEmpresa] = useState('');
+    const [tipoEmpresa, setTipoEmpresa] = useState('');
+    const [email, setEmail] = useState('');
+    const [contraseña, setContraseña] = useState('');
+    const [contacto, setContacto] = useState('');
+
+    const handleRegistro = () => {
+        createEmailyPassword(auth, email, contraseña)
+          .then(async (userCredential) => {
+            const user = userCredential.user;
+    
+            await setDoc(doc(db, "empresas", user.uid), {
+                nombreEmpresa: nombreEmpresa,
+                tipoEmpresa: tipoEmpresa,
+                email: email,
+                contacto: contacto,
+              });
+      
+              console.log('Empresa registrada con éxito');
+              navigation.navigate('Home'); // Navegar a la pantalla de inicio o donde sea necesario
+            })
+            .catch(error => {
+              console.error('Error al registrar la empresa:', error);
+            });
+        };
+      
