@@ -1,47 +1,33 @@
-import React, { component } from 'react'
-import { Text , Stylesheet , View } from "react-native"
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { auth, createUserWithEmailAndPassword } from './firebase';
+import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
-export default function EmpresaAdd() {
-    ruturn(
-        <view style={styles.padre}>
-            <view>
-                <image source={require('../assets/imagenes/spider.jpeg')} style={styles.spider} />
-            </view>
+const db = getFirestore();
+export default function RegistroEmpresa({ navigation }) {
+    const [nombreEmpresa, setNombreEmpresa] = useState('');
+    const [tipoEmpresa, setTipoEmpresa] = useState('');
+    const [email, setEmail] = useState('');
+    const [contraseña, setContraseña] = useState('');
+    const [contacto, setContacto] = useState('');
 
-            <view style={styles.tarjeta}>
-
-            </view>
-        </view>
-    );
-}
-const styles = StyleSheet.create({
-    padre:{
-        flex:1,
-        justifyContent: 'center',
-        alingItems:'center',
-        backgroundColor:'white'
-    },
-    spider:{
-        width:100,
-        height:100,
-        borderRadius: 50,
-        borderColor:'white'
-    },
-
-    tarjeta:{
-        margin: 20,
-        backgroundColor:'white',
-        borderRadius:20,
-        width:'90%',
-        padding:20,
-        shadowColor:"#0000",
-        shadowOffset:{
-            width:0,
-            height:2
-        },
-        shadowOpacity:0.25,
-        shadowRadius:4,
-        elevation:5,
-        
-    }
-});
+    const handleRegistro = () => {
+        createEmailyPassword(auth, email, contraseña)
+          .then(async (userCredential) => {
+            const user = userCredential.user;
+    
+            await setDoc(doc(db, "empresas", user.uid), {
+                nombreEmpresa: nombreEmpresa,
+                tipoEmpresa: tipoEmpresa,
+                email: email,
+                contacto: contacto,
+              });
+      
+              console.log('Empresa registrada con éxito');
+              navigation.navigate('Home'); // Navegar a la pantalla de inicio o donde sea necesario
+            })
+            .catch(error => {
+              console.error('Error al registrar la empresa:', error);
+            });
+        };
+      
