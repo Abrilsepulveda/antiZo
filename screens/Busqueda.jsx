@@ -94,7 +94,19 @@ export default function App() {
                         }} 
                     />
                     <Tab.Screen 
-                        
+                        name="Profile" 
+                        component={ProfileScreen} 
+                        options={{
+                            // Establecer el ícono de perfil
+                            tabBarIcon: ({ color, size }) => (
+                                <Ionicons name="person" color={color} size={size} />
+                            ),
+                        }} 
+                    />
+                </Tab.Navigator>
+            </NavigationContainer>
+        );
+    }
 const styles = StyleSheet.create({
     container: {
       flex: 1,
