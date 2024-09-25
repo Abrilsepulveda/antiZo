@@ -29,3 +29,9 @@ export default function RegistroEmpleado({ navigation }) {
               console.error('Error al registrar el empleado:', error);
             });
         };
+
+        return (
+            <View style={styles.container}>
+              <Image source={require('./assets/logo.png')} style={styles.logo} />
+              <Text style={styles.title}>WorkMap</Text>
+        
