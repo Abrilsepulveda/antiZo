@@ -5,7 +5,10 @@ import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
 const db = getFirestore();
 
-<Button title="Register as Company" onPress={() => navigation.navigate('CompanyRegistration')} />
+<TouchableOpacity onPress={() => navigation.navigate('RegistroEmpleado')}>
+  <Text style={styles.switchText}>Registrarse como Empleado</Text>
+</TouchableOpacity>
+
 
 export default function RegistroEmpresa({ navigation }) {
     const [nombreEmpresa, setNombreEmpresa] = useState('');
