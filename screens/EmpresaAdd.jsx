@@ -4,6 +4,14 @@ import { auth, createUserWithEmailAndPassword } from './firebase';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
 const db = getFirestore();
+
+export default function EmpresasAdd() {
+  return (
+    <View>
+      <Text>Empresas Add Screen</Text>
+    </View>
+  );
+}
 export default function RegistroEmpresa({ navigation }) {
     const [nombreEmpresa, setNombreEmpresa] = useState('');
     const [tipoEmpresa, setTipoEmpresa] = useState('');
