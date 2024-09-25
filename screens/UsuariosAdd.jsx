@@ -77,3 +77,11 @@ export default function RegistroEmpleado({ navigation }) {
     </View>
   );
 }
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#EFFFA6',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: 20,
+    },
