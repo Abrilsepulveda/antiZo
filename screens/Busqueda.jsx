@@ -10,7 +10,7 @@ import { Ionicons } from '@expo/vector-icons';
 import bandejaImage from '../assets/imagenes/bandeja.png';
 import cuentaImage from '../assets/imagenes/cuenta.png';
 
-export default function Busqueda() {
+ function Busqueda() {
     return (
       <View>
         <Text>Busqueda Screen</Text>
@@ -80,7 +80,9 @@ function Profile() {
     );
 }
 
-export default function App() {
+const Tab = createBottomTabNavigator();
+
+function App() {
     return (
         // Envolver el contenido en NavigationContainer para habilitar la navegación
         <NavigationContainer>
@@ -119,6 +121,8 @@ export default function App() {
             </NavigationContainer>
         );
     }
+
+    export default App;
 
 const styles = StyleSheet.create({
     container: {
