@@ -41,4 +41,9 @@ export default function RegistroEmpleado({ navigation }) {
                 value={nombre}
                 onChangeText={setNombre}
             />
-            
+            <TextInput
+                style={styles.input}
+                placeholder="Apellidos"
+                value={apellidos}
+                onChangeText={setApellidos}
+            />
