@@ -4,17 +4,17 @@ import { View, StyleSheet, Dimensions } from 'react-native'; // Componentes de R
 import MapView, { Marker } from 'react-native-maps'; // Mapa y marcador de React Native 
 Maps
 
+const HomeScreen = () => {
+  const navigation = useNavigation();
 
-export default function Home({ navigation }) {
   return (
-    <View>
-      <Text>Home Screen</Text>
-      <Button title="Add User" onPress={() => navigation.navigate('UsuariosAdd')} />
-      <Button title="Add Company" onPress={() => navigation.navigate('EmpresasAdd')} />
-      <Button title="Search" onPress={() => navigation.navigate('Busqueda')} />
+    <View>   
+
+      <Button title="Ir a Búsqueda" onPress={() => navigation.navigate('Busqueda')} />
     </View>
   );
-}
+};
+
 
 export function MapScreen()  {
     
