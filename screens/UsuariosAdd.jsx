@@ -5,6 +5,7 @@ import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
 const db = getFirestore();
 
+<Button title="Back to Login" onPress={() => navigation.navigate('Login')} />
 
 export default function RegistroEmpleado({ navigation }) {
     const [nombre, setNombre] = useState('');
