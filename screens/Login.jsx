@@ -4,6 +4,14 @@ import {  signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from './firebase'; 
 
 
+export default function Login({ navigation }) {
+  return (
+    <View>
+      <Text>Login Screen</Text>
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+    </View>
+  );
+}
 export default function LoginScreen({ navigation }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

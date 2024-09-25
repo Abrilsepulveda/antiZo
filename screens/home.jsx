@@ -26,8 +26,16 @@ export default function MapScreen()  {
   title="Ubicación 1" // Título al hacer clic en el marcador
   description="Descripción de la ubicación" // Descripción que se muestra al hacer clic
 />
+    <View>
+      <Text>Home Screen</Text>
+      <Button title="Add User" onPress={() => navigation.navigate('UsuariosAdd')} />
+      <Button title="Add Company" onPress={() => navigation.navigate('EmpresasAdd')} />
+      <Button title="Search" onPress={() => navigation.navigate('Busqueda')} />
+    </View>
+
 </MapView>
 </View>
+
 );
 }
 //  estilos de la pantalla y el mapa
