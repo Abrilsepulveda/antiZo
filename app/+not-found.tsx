@@ -1,46 +1,25 @@
-import { Link, Stack } from 'expo-router';
-import { StyleSheet, Text, View } from 'react-native';
-import React, { useState } from 'react';
-import UsuariosAdd from '../src/modules/login/personas/components/UsuariosAdd';
-import EmpresaAdd from '../src/modules/login/empresas/components/EmpresaAdd';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default function NotFoundScreen() {
+// Importar las pantallas
+import Login from '../screens/Login';
+import UsuariosAdd from '../screens/UsuariosAdd';
+import EmpresasAdd from '../screens/EmpresaAdd';
+import Busqueda from '../screens/Busqueda';
+
+const Stack = createStackNavigator();
+
+export default function App() {
   return (
-    <>
-      <Stack.Screen options={{ title: 'UUUUUY!' }} />
-      <View style={styles.container}>
-        <Text style={styles.title}>Esta pantalla no existe</Text>
-        <UsuariosAdd onAdd={undefined}></UsuariosAdd>
-        <EmpresaAdd onAdd={undefined}></EmpresaAdd>
-      
-        <Link href="/" style={styles.link}>
-          <Text style={styles.linkText}>Pantalla principal</Text>
-        </Link>
-      </View>
-    </>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        {/* Configurar las rutas para cada pantalla */}
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="UsuariosAdd" component={UsuariosAdd} />
+        <Stack.Screen name="EmpresasAdd" component={EmpresasAdd} />
+        <Stack.Screen name="Busqueda" component={Busqueda} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}  
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',   
-
-    
-    justifyContent: 'center',
-    padding: 20,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
-  },
-  linkText: {
-    fontSize: 14,
-    color: '#2e78b7',
-  },
-});
+}

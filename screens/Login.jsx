@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native'; 
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import {  signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from './firebase'; 
 
 
@@ -10,16 +10,18 @@ export default function LoginScreen({ navigation }) {
 }
 
 
-const handleLogin = () => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        console.log('Usuario logueado:', user.email);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
+const handleLogin = async () => {
+  try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      console.log('Usuario logueado:', user.email);
+      // Navega a la pantalla principal
+      navigation.navigate('Home'); // Cambia 'Home' al nombre de tu pantalla principal
+  } catch (error) {
+      console.error(error);
+      Alert.alert('Error de inicio de sesión', error.message);
+      }
+    };
 
   return (
     <View style={styles.container}>
