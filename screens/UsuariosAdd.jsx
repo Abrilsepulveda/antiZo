@@ -5,13 +5,6 @@ import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
 const db = getFirestore();
 
-export default function UsuariosAdd() {
-  return (
-    <View>
-      <Text>Usuarios Add Screen</Text>
-    </View>
-  );
-}
 
 export default function RegistroEmpleado({ navigation }) {
     const [nombre, setNombre] = useState('');
