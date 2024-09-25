@@ -5,25 +5,13 @@ import firebase from '../firebase';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
-
+import { useNavigation } from '@react-navigation/native';
 import bandejaImage from '../assets/imagenes/bandeja.png';
 import cuentaImage from '../assets/imagenes/cuenta.png';
 
 
-const Busqueda = () => {
+const BusquedaScreen = () => {
     const navigation = useNavigation();
-  
-    return (
-      <View>
-        {/* ... */}
-        <Button title="Volver a Home" onPress={() => navigation.goBack()} />
-      </View>
-    );
-  };
-
-
-  
-function BusquedaScreen() {
     const [trabajos, setTrabajos] = useState([]);
     const [busqueda, setBusqueda] = useState('');
  
