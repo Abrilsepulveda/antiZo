@@ -53,7 +53,7 @@ const handleLogin = async () => {
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.googleButton}>
-        <Image source={require('../assets/imagenes/google.png')} style={styles.googleIcon} />
+        <Image source={require('../assets/imagenes/google1.png')} style={styles.googleIcon} />
         <Text style={styles.googleButtonText}>Continuar con Google</Text>
       </TouchableOpacity>
 
