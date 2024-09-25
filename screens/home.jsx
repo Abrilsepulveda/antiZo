@@ -7,6 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 
 
 export function Home()  {
+  const navigation = useNavigation();
     
     const initialRegion = {
       latitude: -34.603722, // Coordenada de latitud inicial
@@ -45,3 +46,4 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').height, // Alto del mapa igual al alto de la pantalla
       },
     });
+    export default Home;
