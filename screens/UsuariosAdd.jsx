@@ -22,4 +22,10 @@ export default function RegistroEmpleado({ navigation }) {
                 email: email,
                 contacto: contacto,
               });
-      
+              console.log('Empleado registrado con éxito');
+              navigation.navigate('Home'); // Navegar a la pantalla de inicio o donde sea necesario
+            })
+            .catch(error => {
+              console.error('Error al registrar el empleado:', error);
+            });
+        };
