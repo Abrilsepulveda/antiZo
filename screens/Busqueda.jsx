@@ -84,7 +84,17 @@ export default function App() {
                         }} 
                     />
                     <Tab.Screen 
-            
+                        name="Home" 
+                        component={HomeScreen} 
+                        options={{
+                            // Establecer el ícono de inicio
+                            tabBarIcon: ({ color, size }) => (
+                                <Ionicons name="home" color={color} size={size} />
+                            ),
+                        }} 
+                    />
+                    <Tab.Screen 
+                        
 const styles = StyleSheet.create({
     container: {
       flex: 1,
