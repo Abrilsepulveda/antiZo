@@ -9,13 +9,19 @@ import { Ionicons } from '@expo/vector-icons';
 import bandejaImage from '../assets/imagenes/bandeja.png';
 import cuentaImage from '../assets/imagenes/cuenta.png';
 
- function Busqueda() {
+
+const Busqueda = () => {
+    const navigation = useNavigation();
+  
     return (
       <View>
-        <Text>Busqueda Screen</Text>
+        {/* ... */}
+        <Button title="Volver a Home" onPress={() => navigation.goBack()} />
       </View>
     );
-  }
+  };
+
+
   
 function BusquedaScreen() {
     const [trabajos, setTrabajos] = useState([]);
@@ -63,21 +69,6 @@ function BusquedaScreen() {
       );
 }
 
-function Home() {
-    return (
-        <View style={styles.center}>
-            <Text>Home</Text>
-        </View>
-    );
-}
-
-function Profile() {
-    return (
-        <View style={styles.center}>
-            <Text>Profile </Text>
-        </View>
-    );
-}
 
 const Tab = createBottomTabNavigator();
 
