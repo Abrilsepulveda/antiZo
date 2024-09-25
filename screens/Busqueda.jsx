@@ -24,6 +24,7 @@ export default function BusquedaScreen() {
           const trabajosSnapshot = await firebase.firestore().collection('trabajos').get();
           const trabajosData = trabajosSnapshot.docs.map(doc => doc.data());
           setTrabajos(trabajosData);
+            
         };
 
         fetchTrabajos();
