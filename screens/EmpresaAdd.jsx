@@ -5,7 +5,7 @@ import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
 const db = getFirestore();
 
-<TouchableOpacity onPress={() => navigation.navigate('RegistroEmpleado')}>
+<TouchableOpacity onPress={() => navigation.navigate('UsuariosAdd')}>
   <Text style={styles.switchText}>Registrarse como Empleado</Text>
 </TouchableOpacity>
 

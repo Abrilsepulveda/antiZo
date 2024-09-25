@@ -4,7 +4,7 @@ import { auth, createUserWithEmailAndPassword } from '../firebase';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
 
-<TouchableOpacity onPress={() => navigation.navigate('RegistroEmpresa')}>
+<TouchableOpacity onPress={() => navigation.navigate('EmpresaAdd')}>
   <Text style={styles.switchText}>Registrarse como Empresa</Text>
 </TouchableOpacity>
 
