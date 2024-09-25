@@ -6,6 +6,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
+
+import bandejaImage from '../assets/imagenes/bandeja.png';
+import cuentaImage from '../assets/imagenes/cuenta.png';
+
+export default function Busqueda() {
+    return (
+      <View>
+        <Text>Busqueda Screen</Text>
+      </View>
+    );
+  }
   
 function BusquedaScreen() {
     const [trabajos, setTrabajos] = useState([]);
