@@ -16,4 +16,10 @@ export default function RegistroEmpleado({ navigation }) {
         createUserWithEmailAndPassword(auth, email, password)
           .then(async (userCredential) => {
             const user = userCredential.user;
-    
+            await setDoc(doc(db, "empleados", user.uid), {
+                nombre: nombre,
+                apellidos: apellidos,
+                email: email,
+                contacto: contacto,
+              });
+      
