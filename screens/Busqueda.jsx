@@ -2,15 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, StyleSheet, Image, FlatList } from 'react-native';
 import MapView from 'react-native-maps';
 import firebase from '../firebase';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
 
-
-export default function Busqueda() {
-    return (
-      <View>
-        <Text>Busqueda Screen</Text>
-      </View>
-    );
-  }
   
 export default function BusquedaScreen() {
     const [trabajos, setTrabajos] = useState([]);
@@ -55,6 +50,22 @@ export default function BusquedaScreen() {
 
         </View>
       );
+}
+
+function Home() {
+    return (
+        <View style={styles.center}>
+            <Text>Home</Text>
+        </View>
+    );
+}
+
+function Profile() {
+    return (
+        <View style={styles.center}>
+            <Text>Profile </Text>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
