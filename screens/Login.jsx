@@ -6,12 +6,12 @@ import { auth } from './firebase';
 
 export default function LoginScreen({ navigation }) {
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [contraseña, setContraseña] = useState('');
 }
 
 
 const handleLogin = () => {
-  inicioSesionConEmailyContraseña(auth, email, password)
+  inicioSesionConEmailyContraseña(auth, email, contraseña)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log('Usuario logueado:', user.email);
@@ -38,8 +38,8 @@ const handleLogin = () => {
         style={styles.input}
         placeholder="contraseña"
         secureTextEntry
-        value={password}
-        onChangeText={setPassword}
+        value={contraseña}
+        onChangeText={setContraseña}
       />
       <TouchableOpacity style={styles.forgotPassword}>
         <Text style={styles.forgotPasswordText}>recuperar contraseña</Text>
