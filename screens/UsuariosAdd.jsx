@@ -35,3 +35,10 @@ export default function RegistroEmpleado({ navigation }) {
               <Image source={require('./assets/logo.png')} style={styles.logo} />
               <Text style={styles.title}>WorkMap</Text>
         
+              <TextInput
+                style={styles.input}
+                placeholder="Nombre"
+                value={nombre}
+                onChangeText={setNombre}
+            />
+            
