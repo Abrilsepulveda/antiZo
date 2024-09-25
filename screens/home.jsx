@@ -20,3 +20,13 @@ export default function MapScreen()  {
         style={styles.map} // Estilos del mapa para ocupar toda la pantalla
         initialRegion={initialRegion} // Configuramos la región inicial
       >
+ {/* Defini un marcador que aparece en una ubicación específica */}
+ <Marker
+  coordinate={{ latitude: -34.603722, longitude: -58.381592 }} // Coordenadas del marcador
+  title="Ubicación 1" // Título al hacer clic en el marcador
+  description="Descripción de la ubicación" // Descripción que se muestra al hacer clic
+/>
+</MapView>
+</View>
+);
+}
