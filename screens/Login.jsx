@@ -26,7 +26,7 @@ const handleLogin = async () => {
 
   return (
     <View style={styles.container}>
-      <Image source={require('./assets/imagenes/logo.png')} style={styles.logo} />
+      <Image source={require('../assets/imagenes/logo.png')} style={styles.logo} />
       <Text style={styles.title}>WorkMap</Text>
       <Text style={styles.subtitle}>Tu trabajo ideal, a un click de distancia</Text>
 
@@ -53,7 +53,7 @@ const handleLogin = async () => {
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.googleButton}>
-        <Image source={require('./assets/imagenes/google.png')} style={styles.googleIcon} />
+        <Image source={require('../assets/imagenes/google.png')} style={styles.googleIcon} />
         <Text style={styles.googleButtonText}>Continuar con Google</Text>
       </TouchableOpacity>
 
