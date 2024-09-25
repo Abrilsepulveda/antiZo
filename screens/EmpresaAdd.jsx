@@ -5,13 +5,7 @@ import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
 const db = getFirestore();
 
-export default function EmpresasAdd() {
-  return (
-    <View>
-      <Text>Empresas Add Screen</Text>
-    </View>
-  );
-}
+
 export default function RegistroEmpresa({ navigation }) {
     const [nombreEmpresa, setNombreEmpresa] = useState('');
     const [tipoEmpresa, setTipoEmpresa] = useState('');
@@ -37,8 +31,7 @@ export default function RegistroEmpresa({ navigation }) {
             .catch(error => {
               console.error('Error al registrar la empresa:', error);
             });
-        };
-
+  };
         return (
             <View style={styles.container}>
               <Image source={require('../assets/imagenes/logo.png')} style={styles.logo} />
@@ -85,9 +78,8 @@ export default function RegistroEmpresa({ navigation }) {
         <Text style={styles.switchText}>Registrarse como Empleado</Text>
       </TouchableOpacity>
     </View>
-  );
-}   
-
+  );  
+}
 // estilos
 const styles = StyleSheet.create({
     container: {
