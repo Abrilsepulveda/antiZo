@@ -9,8 +9,8 @@ export default function UsuariosAdd() {
   return (
     <View>
       <Text>Usuarios Add Screen</Text>
-    </View>
-  );
+    </View>
+  );
 }
 
 export default function RegistroEmpleado({ navigation }) {
@@ -40,7 +40,7 @@ export default function RegistroEmpleado({ navigation }) {
 
         return (
             <View style={styles.container}>
-              <Image source={require('./assets/logo.png')} style={styles.logo} />
+              <Image source={require('../assets/imagenes/logo.png')} style={styles.logo} />
               <Text style={styles.title}>WorkMap</Text>
         
               <TextInput
