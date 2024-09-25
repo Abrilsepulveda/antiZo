@@ -1,6 +1,6 @@
-// firebase.js (Nuevo nombre más descriptivo)
+
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth"; // Importa el módulo de autenticación
+import { getAuth } from "firebase/auth"; 
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
@@ -16,6 +16,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-// Exporta la instancia de autenticación
+
 const auth = getAuth(app);
 export { auth };
