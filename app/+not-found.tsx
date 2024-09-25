@@ -14,7 +14,6 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
-        {/* Configurar las rutas para cada pantalla */}
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="UsuariosAdd" component={UsuariosAdd} />
         <Stack.Screen name="EmpresasAdd" component={EmpresasAdd} />
