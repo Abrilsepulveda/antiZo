@@ -3,20 +3,10 @@ import React from 'react';
 import { View, StyleSheet, Dimensions } from 'react-native'; // Componentes de React Native
 import MapView, { Marker } from 'react-native-maps'; // Mapa y marcador de React Native 
 Maps
-
-const HomeScreen = () => {
-  const navigation = useNavigation();
-
-  return (
-    <View>   
-
-      <Button title="Ir a Búsqueda" onPress={() => navigation.navigate('Busqueda')} />
-    </View>
-  );
-};
+import { useNavigation } from '@react-navigation/native';
 
 
-export function MapScreen()  {
+export function Home()  {
     
     const initialRegion = {
       latitude: -34.603722, // Coordenada de latitud inicial
@@ -39,6 +29,8 @@ export function MapScreen()  {
   description="Descripción de la ubicación" // Descripción que se muestra al hacer clic
 />
 </MapView>
+<Button title="Ir a Búsqueda" onPress={() => navigation.navigate('Busqueda')} />
+     
 </View>
 
 );
