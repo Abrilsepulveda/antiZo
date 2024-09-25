@@ -47,3 +47,10 @@ export default function RegistroEmpleado({ navigation }) {
                 value={apellidos}
                 onChangeText={setApellidos}
             />
+            <TextInput
+                style={styles.input}
+                placeholder="Email"
+                value={email}
+                onChangeText={setEmail}
+                keyboardType="email-address"
+            />
