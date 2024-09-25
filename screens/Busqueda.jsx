@@ -3,6 +3,15 @@ import { View, Text, TextInput, StyleSheet, Image, FlatList } from 'react-native
 import MapView from 'react-native-maps';
 import firebase from '../firebase';
 
+
+export default function Busqueda() {
+    return (
+      <View>
+        <Text>Busqueda Screen</Text>
+      </View>
+    );
+  }
+  
 export default function BusquedaScreen() {
     const [trabajos, setTrabajos] = useState([]);
     const [busqueda, setBusqueda] = useState('');
