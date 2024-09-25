@@ -68,6 +68,23 @@ function Profile() {
     );
 }
 
+export default function App() {
+    return (
+        // Envolver el contenido en NavigationContainer para habilitar la navegación
+        <NavigationContainer>
+            <Tab.Navigator>
+                <Tab.Screen 
+                        name="Busqueda" 
+                        component={BusquedaScreen} 
+                        options={{
+                            // Establecer el ícono de búsqueda
+                            tabBarIcon: ({ color, size }) => (
+                                <Ionicons name="search" color={color} size={size} />
+                            ),
+                        }} 
+                    />
+                    <Tab.Screen 
+            
 const styles = StyleSheet.create({
     container: {
       flex: 1,
