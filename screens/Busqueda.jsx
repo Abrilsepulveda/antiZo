@@ -3,6 +3,8 @@ import { View, Text, TextInput, StyleSheet, Image, FlatList } from 'react-native
 import MapView from 'react-native-maps';
 import firebase from '../firebase';
 
+import bandejaImage from '../assets/imagenes/bandeja.png';
+import cuentaImage from '../assets/imagenes/cuenta.png';
 
 export default function Busqueda() {
     return (
