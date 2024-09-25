@@ -26,6 +26,11 @@ const BusquedaScreen = () => {
 
         fetchTrabajos();
     }, []);
+
+    const trabajosFiltrados = trabajos.filter(trabajo => 
+        trabajo.nombre.toLowerCase().includes(busqueda.toLowerCase())
+    );
+
     
     return (
         <View style={styles.container}>
@@ -39,7 +44,7 @@ const BusquedaScreen = () => {
             <MapView style={styles.map} />
 
             <FlatList
-                data={trabajos}
+                data={trabajosFiltrados}
                 keyExtractor={(item) => item.id}
                 renderItem={({ item }) => (
                 <View style={styles.card}>
@@ -52,7 +57,7 @@ const BusquedaScreen = () => {
                 </View>
                 )}
             />
-
+        <Button title="Volver a Home" onPress={() => navigation.goBack()} />
         </View>
       );
 }
