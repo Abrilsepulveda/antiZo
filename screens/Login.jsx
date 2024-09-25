@@ -4,6 +4,18 @@ import {  signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase'; 
 
 
+const LoginScreen = () => {
+  const navigation = useNavigation();
+
+  return (
+    <View> 
+
+      {/* ... login form */}
+      <Button title="Register as User" onPress={() => navigation.navigate('UserRegistration')} />
+    </View>
+  );
+};
+
 export default function Login({ navigation }) {
   
     const [email, setEmail] = useState('');
