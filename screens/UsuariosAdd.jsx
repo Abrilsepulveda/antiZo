@@ -4,28 +4,10 @@ import { auth, createUserWithEmailAndPassword } from '../firebase';
 import { getFirestore, doc, setDoc } from 'firebase/firestore';
 
 
-const UsuariosAdd = () => {
-  const navigation = useNavigation();
+<TouchableOpacity onPress={() => navigation.navigate('RegistroEmpresa')}>
+  <Text style={styles.switchText}>Registrarse como Empresa</Text>
+</TouchableOpacity>
 
-  const handleRegistration = () => {
-    // Lógica de registro del usuario
-    console.log('Usuario registrado exitosamente');
-
-    // Navegar a la pantalla Home después del registro
-    navigation.navigate('Home');
-
-    
-  };
-
-  return (
-    <View>
-      <Text>Formulario de Registro de Usuario</Text>
-      {/* Campos del formulario de registro */}
-      <Button title="Registrarse" onPress={handleRegistration} />
-      <Button title="Volver a Home" onPress={() => navigation.goBack()} />
-    </View>
-  );
-};
 
 const db = getFirestore();
 
