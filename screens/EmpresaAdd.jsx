@@ -34,7 +34,7 @@ export default function RegistroEmpresa({ navigation }) {
   };
         return (
             <View style={styles.container}>
-              <Image source={require('../assets/imagenes/logo.png')} style={styles.logo} />
+              <Image source={require('../assets/imagenes/favicon.png')} style={styles.logo} />
               <Text style={styles.title}>WorkMap</Text>
               <TextInput
                 style={styles.input}
