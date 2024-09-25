@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
   
-export default function BusquedaScreen() {
+function BusquedaScreen() {
     const [trabajos, setTrabajos] = useState([]);
     const [busqueda, setBusqueda] = useState('');
  
@@ -107,7 +107,7 @@ export default function App() {
             </NavigationContainer>
         );
     }
-    
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,
