@@ -96,3 +96,11 @@ const styles = StyleSheet.create({
         color: '#000',
         marginBottom: 30,
       },
+      input: {
+        width: '100%',
+        padding: 15,
+        borderColor: '#ccc',
+        borderWidth: 1,
+        borderRadius: 8,
+        marginBottom: 15,
+      },
