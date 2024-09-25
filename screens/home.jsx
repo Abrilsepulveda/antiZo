@@ -30,3 +30,4 @@ export default function MapScreen()  {
 </View>
 );
 }
+//  estilos de la pantalla y el mapa
