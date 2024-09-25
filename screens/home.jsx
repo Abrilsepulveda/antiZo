@@ -16,8 +16,8 @@ export default function Home({ navigation }) {
   );
 }
 
-export default function MapScreen()  {
-    // Defini la región inicial que mostrará el mapa, con coordenadas y zoom
+export function MapScreen()  {
+    
     const initialRegion = {
       latitude: -34.603722, // Coordenada de latitud inicial
       longitude: -58.381592, // Coordenada de longitud inicial
@@ -29,7 +29,7 @@ export default function MapScreen()  {
         <View style={styles.container}>
       {/* Componente MapView para mostrar el mapa */}
       <MapView
-        style={styles.map} // Estilos del mapa para ocupar toda la pantalla
+        style={styles.map} // Estilos del mapa para  toda la pantalla
         initialRegion={initialRegion} // Configuramos la región inicial
       >
  {/* Defini un marcador que aparece en una ubicación específica */}
